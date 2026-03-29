@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "뭉글",
+    "slug": "moongeul",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "moongeul",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "bundleDisplayName": "뭉글",
+      "icon": "./assets/images/icon.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.moongeul.app",
+      "buildNumber": "1.0.2",
+      "deploymentTarget": "15.1",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true,
+        "NSCameraUsageDescription": "프로필 사진 촬영을 위해 카메라 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "사용자의 기기에 저장된 사진을 프로필 이미지로 등록하거나 게시글에 첨부하기 위해 갤러리 접근 권한이 필요합니다.",
+        "NSPhotoLibraryAddUsageDescription": "앱에서 촬영한 사진을 사용자의 갤러리에 저장하기 위해 권한이 필요합니다.",
+        "NSUserTrackingUsageDescription": "앱 성능 개선 및 사용자 맞춤형 서비스 제공을 위해 활동 데이터를 수집하고 분석합니다."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.moongeul.app"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.1",
+            "newArchEnabled": true,
+            "extraCCFlags": ["-std=c++20"]
+          },
+          "android": {
+            "newArchEnabled": true
+          }
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#326BFF"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "사용자가 선택한 사진을 앱 내에서 활용하기 위해 갤러리에 접근합니다."
+        }
+      ],
+      "expo-tracking-transparency"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c1b9c27e-b2c9-49a4-ba5f-586096f826ae"
+      }
+    }
+  }
+}
