@@ -13,7 +13,7 @@
       "icon": "./assets/images/icon.png",
       "supportsTablet": true,
       "bundleIdentifier": "com.moongeul.app",
-      "buildNumber": "1.0.2",
+      "buildNumber": "1",
       "deploymentTarget": "15.1",
       "config": {
         "usesNonExemptEncryption": false
@@ -27,27 +27,38 @@
       }
     },
     "android": {
+      "package": "com.moongeul.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "edgeToEdgeEnabled": true,
-      "package": "com.moongeul.app"
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "com.google.android.gms.permission.AD_ID"
+      ]
     },
     "plugins": [
       "expo-router",
       [
         "expo-build-properties",
         {
+          "android": {
+            "minSdkVersion": 24,
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "newArchEnabled": true
+          },
           "ios": {
             "deploymentTarget": "15.1",
             "newArchEnabled": true,
-            "extraCCFlags": ["-std=c++20"]
-          },
-          "android": {
-            "newArchEnabled": true
+            "extraCCFlags": [
+              "-std=c++20"
+            ]
           }
         }
       ],
@@ -73,9 +84,11 @@
       "reactCompiler": true
     },
     "extra": {
-      "router": {},
+      "router": {
+        "origin": false
+      },
       "eas": {
-        "projectId": "c1b9c27e-b2c9-49a4-ba5f-586096f826ae"
+        "projectId": "ec582d8b-e6a3-4d9e-83c7-8b539f21c5be"
       }
     }
   }
