@@ -12,7 +12,6 @@
       "bundleIdentifier": "com.moongeul.app",
       "buildNumber": "1",
       "supportsTablet": true,
-      "deploymentTarget": "15.1",
       "config": {
         "usesNonExemptEncryption": false
       },
@@ -81,7 +80,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "ec582d8b-e6a3-4d9e-83c7-8b539f21c5be"
+        "projectId": "74566a65-1a52-4a5c-963f-cb301b18c4cf"
       }
     }
   }
