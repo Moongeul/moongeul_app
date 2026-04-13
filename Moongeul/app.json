@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "bundleIdentifier": "com.moongeul.app",
+      "bundleIdentifier": "com.moongeul.appidentifer",
       "buildNumber": "1",
       "supportsTablet": true,
       "config": {
